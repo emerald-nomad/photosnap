@@ -1,16 +1,63 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+:root {
+  --color-black: #000;
+  --color-grey: #dfdfdf;
+  --color-white: #fff;
+  --color-accent-orange: #ffc593;
+  --color-accent-pink: #bc7198;
+  --color-accent-blue: #5a77ff;
 
-* {
+  --filter-white: invert(100%) sepia(7%) saturate(2%) hue-rotate(313deg)
+    brightness(105%) contrast(100%);
+
   box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+h1,
+h2.large {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.17px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 25px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+h4 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+
+button,
+a {
+  font-size: 1rem;
 }
