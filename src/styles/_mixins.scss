@@ -1,0 +1,13 @@
+@mixin mq($size) {
+  @if $size == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $size == lg {
+    @media (min-width: 800px) {
+      @content;
+    }
+  }
+}

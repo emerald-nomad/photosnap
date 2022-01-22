@@ -27,21 +27,17 @@ const TextSection: React.FC<TextSectionProps> = ({
 
   return (
     <div className={[styles["text-section"], darkThemeClassName].join(" ")}>
-      <picture>
-        <source srcSet={imgUrls.mobile} media="(max-width: 375px)" />
-        <source srcSet={imgUrls.tablet} media="(max-width: 768px)" />
-        <img
-          src={imgUrls.desktop}
-          className={styles["text-section__img"]}
-          alt="Earth & Space Background Image"
-        />
+      <picture className={styles["text-section__picture"]}>
+        <source srcSet={imgUrls.mobile} media="(max-width: 767px)" />
+        <source srcSet={imgUrls.tablet} media="(max-width: 829px)" />
+        <img src={imgUrls.desktop} alt="Earth & Space Background Image" />
       </picture>
       <section className={styles["text-section__content"]}>
         <h1>{title}</h1>
         <p>{text}</p>
         {link && (
           <Link dark={dark} href={link.href}>
-            {link.text}
+            <h4>{link.text}</h4>
           </Link>
         )}
       </section>
