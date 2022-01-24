@@ -1,4 +1,4 @@
-import { Button, Link, TextSection } from "components";
+import { Button, Link, StoryPreview, TextSection } from "components";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -48,6 +48,46 @@ const Home: NextPage = () => {
           text: "View the stories",
           href: "/stories",
         }}
+      />
+
+      <StoryPreview
+        backgroundImg={{
+          mobile: "/assets/stories/mobile/mountains.jpg",
+          tablet: "/assets/stories/tablet/mountains.jpg",
+          desktop: "/assets/stories/desktop/mountains.jpg",
+        }}
+        title="The Mountains"
+        author="John Appleseed"
+      />
+
+      <StoryPreview
+        backgroundImg={{
+          mobile: "/assets/stories/mobile/cityscapes.jpg",
+          tablet: "/assets/stories/tablet/cityscapes.jpg",
+          desktop: "/assets/stories/desktop/cityscapes.jpg",
+        }}
+        title="Sunset Cityscapes"
+        author="Benjamin Cruz"
+      />
+
+      <StoryPreview
+        backgroundImg={{
+          mobile: "/assets/stories/mobile/18-days-voyage.jpg",
+          tablet: "/assets/stories/tablet/18-days-voyage.jpg",
+          desktop: "/assets/stories/desktop/18-days-voyage.jpg",
+        }}
+        title="18 Days Voyage"
+        author="Alexei Borodin"
+      />
+
+      <StoryPreview
+        backgroundImg={{
+          mobile: "/assets/stories/mobile/architecturals.jpg",
+          tablet: "/assets/stories/tablet/architecturals.jpg",
+          desktop: "/assets/stories/desktop/architecturals.jpg",
+        }}
+        title="Architecturals"
+        author="Samantha Brooke"
       />
     </>
   );

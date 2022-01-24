@@ -3,17 +3,26 @@ import Image from "next/image";
 import styles from "./Link.module.scss";
 
 interface LinkProps {
-  dark?: boolean;
   href: string;
+  dark?: boolean;
+  expanded?: boolean;
 }
 
-const Link: React.FC<LinkProps> = ({ children, dark, href }) => {
-  const darkThemeClassName = dark ? styles["dark"] : "";
+const Link: React.FC<LinkProps> = ({ children, dark, expanded, href }) => {
+  const classes = [styles["link"]];
+
+  if (dark) {
+    classes.push(styles["dark"]);
+  }
+
+  if (expanded) {
+    classes.push(styles["expanded"]);
+  }
 
   return (
     <NextLink href={href}>
-      <a className={[styles["link"], darkThemeClassName].join(" ")}>
-        {children}
+      <a className={classes.join(" ")}>
+        <h4>{children}</h4>
         <Image
           src="/assets/shared/desktop/arrow.svg"
           width={43}
