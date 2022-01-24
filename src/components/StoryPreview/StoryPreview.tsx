@@ -1,7 +1,7 @@
 import { Link } from "components";
 import styles from "./StoryPreview.module.scss";
 
-interface StoryPreviewProps {
+export interface StoryPreviewProps {
   backgroundImg: {
     mobile: string;
     tablet: string;

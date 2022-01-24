@@ -1,7 +1,25 @@
+@import "styles/mixins";
+
+.story-previews {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(lg) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .story-preview {
   position: relative;
   isolation: isolate;
-  height: 23em;
+  height: 28em;
+
+  @include mq(lg) {
+    height: 33em;
+  }
 
   &__picture {
     z-index: -10;
