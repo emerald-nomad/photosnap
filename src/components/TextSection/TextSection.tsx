@@ -28,8 +28,8 @@ const TextSection: React.FC<TextSectionProps> = ({
   return (
     <div className={[styles["text-section"], darkThemeClassName].join(" ")}>
       <picture className={styles["text-section__picture"]}>
-        <source srcSet={imgUrls.mobile} media="(max-width: 767px)" />
-        <source srcSet={imgUrls.tablet} media="(max-width: 829px)" />
+        <source srcSet={imgUrls.mobile} media="(max-width: 47em)" />
+        <source srcSet={imgUrls.tablet} media="(max-width: 65em)" />
         <img src={imgUrls.desktop} alt="Earth & Space Background Image" />
       </picture>
       <section className={styles["text-section__content"]}>
